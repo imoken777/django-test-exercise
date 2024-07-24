@@ -1,13 +1,13 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff; /* 薄い水色の背景色 */
+    background-color: #f0f8ff;
     margin: 0;
     padding: 20px;
   }
   
   h1 {
     color: #333;
-    background-color: #e0f7fa; /* もう少し濃い水色の背景色 */
+    background-color: #e0f7fa;
     padding: 10px;
     border-radius: 5px;
   }

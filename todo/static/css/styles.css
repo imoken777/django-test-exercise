@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  background-color: #e0f7fa;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+p {
+  margin: 10px 0;
+  color: #666;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  color: #333;
+}
+
+input[type="text"],
+input[type="datetime-local"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  background-color: #00796b;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+.task {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.task h2 {
+  margin-top: 0;
+}
+
+.task ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task li {
+  margin: 5px 0;
+  color: #666;
+}
+
+a {
+  color: #00796b;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

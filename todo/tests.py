@@ -56,6 +56,34 @@ class TaskModelTestCase(TestCase):
 
         self.assertFalse(task.is_overdue(current))
 
+    def test_task_edit(self):
+        due = timezone.make_aware(datetime(2024, 6, 30, 23, 59, 59))
+        task = Task(title="task1", due_at=due)
+        task.save()
+
+        task.title = "updated task1"
+        task.save()
+
+        task = Task.objects.get(pk=task.pk)
+        self.assertEqual(task.title, "updated task1")
+
+
+    def test_task_deletion(self):
+        task = Task(title="task1")
+        task.save()
+        task.delete()
+
+        with self.assertRaises(Task.DoesNotExist):
+            Task.objects.get(pk=task.pk)
+    def test_task_completion(self):
+        due = timezone.make_aware(datetime(2024, 6, 30, 23, 59, 59))
+        task = Task(title="task1", due_at=due)
+        task.save()
+        task.completed = True
+        task.save()
+
+        task = Task.objects.get(pk=task.pk)
+        self.assertTrue(task.completed)
 
 class TodoViewTestCase(TestCase):
     def test_index_get(self):
@@ -116,3 +144,4 @@ class TodoViewTestCase(TestCase):
         response = client.get("/1/")
 
         self.assertEqual(response.status_code, 404)
+
